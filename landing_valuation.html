@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valutazione immobiliare gratuita in 3 minuti – TuoBrand</title>
+    <meta name="description" content="Scopri gratis e in 3 minuti il valore reale del tuo immobile e ricevi un report dettagliato direttamente nella tua casella email." />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      .accordion-content {
+        transition: max-height 0.3s ease;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-900">
+    <!-- HERO -->
+    <section class="relative bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1486308510493-aa64833638e6?auto=format&fit=crop&w=1600&q=80');">
+      <div class="absolute inset-0 bg-gradient-to-br from-black/70 to-black/40"></div>
+      <div class="relative z-10 mx-auto max-w-5xl px-6 py-24 text-center text-white">
+        <img src="https://placehold.co/180x48?text=TuoBrand" alt="Logo TuoBrand" class="mx-auto mb-8" />
+        <h1 class="text-4xl font-bold sm:text-5xl md:text-6xl max-w-4xl mx-auto">Valutazione immobiliare gratuita in <span class="text-primary-200">3 minuti</span></h1>
+        <p class="mt-4 text-lg max-w-3xl mx-auto">Report personalizzato basato su milioni di dati di mercato e sull'esperienza dei nostri consulenti locali.</p>
+
+        <!-- Step 1 Form -->
+        <form id="form-step-1" class="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3 max-w-3xl mx-auto">
+          <input required name="cap" type="text" placeholder="CAP o Città" class="rounded-xl p-4 text-gray-900" />
+          <select required name="tipologia" class="rounded-xl p-4 text-gray-500">
+            <option value="" disabled selected>Tipologia</option>
+            <option value="Appartamento">Appartamento</option>
+            <option value="Villetta">Villetta</option>
+            <option value="Villa">Villa</option>
+            <option value="Attico">Attico</option>
+          </select>
+          <input required name="metri_quadri" type="number" min="20" placeholder="Metri quadri" class="rounded-xl p-4 text-gray-900" />
+          <button type="button" id="continue-btn" class="col-span-1 sm:col-span-3 mt-4 rounded-xl bg-emerald-500 py-4 text-lg font-semibold hover:bg-emerald-600 transition">Continua ▶</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ULTIME VALUTAZIONI -->
+    <section class="py-16 bg-white" id="recent-valuations">
+      <div class="mx-auto max-w-6xl px-6">
+        <h2 class="text-3xl font-semibold text-center mb-10">Ultime valutazioni completate</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Card template (repeat or generate via JS/CMS) -->
+          <div class="bg-gray-100 rounded-2xl p-6 flex flex-col gap-2">
+            <span class="text-sm text-gray-500">15 min fa • 00192 Roma</span>
+            <span class="text-xl font-bold">€ 4.350 / m²</span>
+            <span class="text-gray-600">Appartamento • 95 m²</span>
+          </div>
+          <div class="bg-gray-100 rounded-2xl p-6 flex flex-col gap-2">
+            <span class="text-sm text-gray-500">18 min fa • 24121 Bergamo</span>
+            <span class="text-xl font-bold">€ 2.780 / m²</span>
+            <span class="text-gray-600">Villetta a schiera • 150 m²</span>
+          </div>
+          <div class="bg-gray-100 rounded-2xl p-6 flex flex-col gap-2">
+            <span class="text-sm text-gray-500">23 min fa • 90145 Palermo</span>
+            <span class="text-xl font-bold">€ 1.120 / m²</span>
+            <span class="text-gray-600">Casa indipendente • 210 m²</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COME FUNZIONA -->
+    <section class="py-16 bg-gray-50">
+      <div class="mx-auto max-w-5xl px-6 text-center">
+        <h2 class="text-3xl font-semibold mb-12">Come funziona</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div class="flex flex-col items-center">
+            <div class="rounded-full bg-emerald-100 p-4 mb-4">
+              <span class="text-2xl font-bold text-emerald-500">1</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Inserisci i dati</h3>
+            <p class="text-gray-600">Specifica posizione, tipologia e metratura del tuo immobile.</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <div class="rounded-full bg-emerald-100 p-4 mb-4">
+              <span class="text-2xl font-bold text-emerald-500">2</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Analisi AI</h3>
+            <p class="text-gray-600">Il nostro algoritmo incrocia milioni di comparabili e trend di mercato.</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <div class="rounded-full bg-emerald-100 p-4 mb-4">
+              <span class="text-2xl font-bold text-emerald-500">3</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Ricevi il report</h3>
+            <p class="text-gray-600">Ottieni subito il range di prezzo e un PDF dettagliato per email.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PERCHÉ TUOBRAND -->
+    <section class="py-16 bg-white">
+      <div class="mx-auto max-w-5xl px-6 text-center">
+        <h2 class="text-3xl font-semibold mb-10">Perché scegliere TuoBrand</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="p-6 rounded-2xl bg-gray-100">
+            <h3 class="text-xl font-semibold mb-2">Modello su 70 criteri</h3>
+            <p class="text-gray-600">Valutiamo dettagli costruttivi, posizione e performance del mercato con oltre 70 fattori distintivi.</p>
+          </div>
+          <div class="p-6 rounded-2xl bg-gray-100">
+            <h3 class="text-xl font-semibold mb-2">IA costantemente aggiornata</h3>
+            <p class="text-gray-600">Dataset aggiornato ogni settimana per offrirti stime sempre in linea con il mercato.</p>
+          </div>
+          <div class="p-6 rounded-2xl bg-gray-100">
+            <h3 class="text-xl font-semibold mb-2">Report istantaneo e gratuito</h3>
+            <p class="text-gray-600">Zero costi, zero impegno: scarica subito il PDF completo e mantieni il controllo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STEP 2 FORM -->
+    <section id="step-2-section" class="py-16 bg-gray-50 hidden">
+      <div class="mx-auto max-w-xl px-6 text-center">
+        <h2 class="text-3xl font-semibold mb-6">Quasi fatto! Come possiamo contattarti?</h2>
+        <form id="form-step-2" action="https://your-n8n-instance/webhook/valuation" method="post" class="grid grid-cols-1 gap-4">
+          <input type="hidden" name="cap" />
+          <input type="hidden" name="tipologia" />
+          <input type="hidden" name="metri_quadri" />
+
+          <input required name="nome" type="text" placeholder="Nome e Cognome" class="rounded-xl p-4 text-gray-900" />
+          <input required name="email" type="email" placeholder="Email" class="rounded-xl p-4 text-gray-900" />
+          <input required name="telefono" type="tel" placeholder="Telefono" class="rounded-xl p-4 text-gray-900" />
+          <button type="submit" class="rounded-xl bg-emerald-500 py-4 text-lg font-semibold hover:bg-emerald-600 transition">Ottieni la valutazione gratuita</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-16 bg-white">
+      <div class="mx-auto max-w-5xl px-6">
+        <h2 class="text-3xl font-semibold text-center mb-10">Domande frequenti</h2>
+        <div class="space-y-4">
+          <div class="border border-gray-200 rounded-xl">
+            <button class="w-full px-6 py-4 flex justify-between items-center text-left" data-accordion-target>
+              <span class="font-medium">La valutazione è davvero gratuita?</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            </button>
+            <div class="accordion-content max-h-0 overflow-hidden px-6">
+              <p class="pb-4 text-gray-600">Sì, non chiediamo alcun pagamento né dati di carta di credito.</p>
+            </div>
+          </div>
+          <div class="border border-gray-200 rounded-xl">
+            <button class="w-full px-6 py-4 flex justify-between items-center text-left" data-accordion-target>
+              <span class="font-medium">Quanto è accurata la stima?</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            </button>
+            <div class="accordion-content max-h-0 overflow-hidden px-6">
+              <p class="pb-4 text-gray-600">Il margine medio di scostamento è < 4% rispetto ai prezzi di vendita finali registrati.</p>
+            </div>
+          </div>
+          <div class="border border-gray-200 rounded-xl">
+            <button class="w-full px-6 py-4 flex justify-between items-center text-left" data-accordion-target>
+              <span class="font-medium">Posso aggiornare la stima in futuro?</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            </button>
+            <div class="accordion-content max-h-0 overflow-hidden px-6">
+              <p class="pb-4 text-gray-600">Certo! Puoi richiedere un nuovo report gratuito ogni 3 mesi direttamente dal nostro portale.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-8 bg-gray-50">
+      <div class="mx-auto max-w-5xl px-6 text-center text-sm text-gray-500">
+        © <span id="year"></span> TuoBrand Immobiliare • <a href="#" class="underline">Privacy</a> • <a href="#" class="underline">Cookie</a>
+      </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script>
+      // Year auto-update
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Step form logic
+      const continueBtn = document.getElementById('continue-btn');
+      const formStep1 = document.getElementById('form-step-1');
+      const step2Section = document.getElementById('step-2-section');
+      const formStep2 = document.getElementById('form-step-2');
+
+      continueBtn.addEventListener('click', () => {
+        if (!formStep1.reportValidity()) return;
+        ['cap', 'tipologia', 'metri_quadri'].forEach((field) => {
+          formStep2.elements[field].value = formStep1.elements[field].value;
+        });
+        formStep1.closest('section').classList.add('hidden');
+        step2Section.classList.remove('hidden');
+        step2Section.scrollIntoView({ behavior: 'smooth' });
+      });
+
+      // Accordion toggle
+      document.querySelectorAll('[
